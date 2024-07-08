@@ -14,30 +14,48 @@ var context = canvas.getContext("2d")
 
 // context.fillRect(350,50,100,100)
 
-context.beginPath()
-context.moveTo(75,250)
-context.lineTo(150,50)
-context.lineTo(225,250)
-context.lineTo(50,120)
-context.lineTo(250,120)
-context.lineTo(75,250)
+// context.beginPath()
+// context.moveTo(75,250)
+// context.lineTo(150,50)
+// context.lineTo(225,250)
+// context.lineTo(50,120)
+// context.lineTo(250,120)
+// context.lineTo(75,250)
 
-context.lineWidth = 2
-context.strokeStyle ="yellow"
-context.stroke()
+// context.lineWidth = 2
+// context.strokeStyle ="yellow"
+// context.stroke()
 
-// circunferencias e arcos 
-context.beginPath()
-context.arc(300,56,40,0, 2*Math.PI)
-context.fill()
-context.stroke()
+// // circunferencias e arcos 
+// context.beginPath()
+// context.arc(300,56,40,0, 2*Math.PI)
+// context.fill()
+// context.stroke()
 
-context.beginPath()
-context.arc(50,50,40, 90*Math.PI / 180 , 270*Math.PI/ 180 , false)
-context.fill()
-context.stroke()
+// context.beginPath()
+// context.arc(50,50,40, 90*Math.PI / 180 , 270*Math.PI/ 180 , false)
+// context.fill()
+// context.stroke()
 
-context.beginPath()
-context.arc(80,50,40 ,90*Math.PI /180 , 270*Math.PI /180 , true)
-context.fill()
-context.stroke()
+// context.beginPath()
+// context.arc(80,50,40 ,90*Math.PI /180 , 270*Math.PI /180 , true)
+// context.fill()
+// context.stroke()
+
+var x = 20
+var y = 100
+var raio = 80
+
+requestAnimationFrame(moverBola)
+
+function moverBola (){
+    context.clearRect(0 , 0 ,canvas.width, canvas.height)
+    
+    context.beginPath()
+    context.arc(x,y,raio,0,Math.PI*2)
+    context.fill()
+    
+    x += 10
+    y += 5
+    requestAnimationFrame(moverBola)
+}

@@ -18,5 +18,5 @@ main{
     width: 100vw;
     height: 100vh;
     background-color: rgb(223, 185, 185);
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
